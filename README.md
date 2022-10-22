@@ -8,8 +8,10 @@ The phone is avialable in 2 variants:
 | ------- | ---------- |
 | India | AC2001 |
 | Europe | AC2003 |
-<img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_logo.png" align="centered" />
+<p align="center">
+<img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_logo.png" />
 <img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_avicii.jpg" width=500 height=500 />
+</p>
 
 | Features   |                                               Specification                                                         |
 | ------------- | ------------- |
