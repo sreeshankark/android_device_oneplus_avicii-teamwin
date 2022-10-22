@@ -4,22 +4,23 @@
 <img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_logo.png" />
 </p>
 
-OnePlus Nord (codename:- avicii) is the first non-flagship smartphone from OnePlus Technology Co., Ltd. released in the year 2020
+OnePlus Nord (codename:- avicii) is the first non-flagship smartphone from OnePlus Technology Co., Ltd. released in the year 2020.
 
-The phone is avialable in 2 variants:
+The phone is avialable in 2 variants based on region.
 
-India  :-  AC2001
-
-Europe :- AC2003
+| Region | Variant |
+| ------- | ---------- |
+| India | AC2001 |
+| Europe | AC2003 |
 
 <img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_avicii.jpg" width=500 height=500 />
 
-| Features   |                                               Specification                                                         |
+| Features | Specification |
 | ------------- | ------------- |
 | Chipset |  Qualcomm Snapdragon 765G 5G (SM7250-AB) |
-| CPU  |     Octa-core (1x2.4GHz Single-Core Kryo 475 Prime, 1x2.2GHz Single-Core Kryo 475 Gold & 6x1.8GHz Hexa-Core Kryo 475 Silver)  |
-| GPU  |  Qualcomm Adreno 620 (625Mhz) |
-| RAM  |  6GB/8GB/12GB (LPDDR4X) |
+| CPU  | Octa-core (1x2.4GHz Single-Core Kryo 475 Prime, 1x2.2GHz Single-Core Kryo 475 Gold & 6x1.8GHz Hexa-Core Kryo 475 Silver)  |
+| GPU  | Qualcomm Adreno 620 (625Mhz) |
+| RAM  | 6GB/8GB/12GB (LPDDR4X) |
 | Shipped OS | Android 10 (Oxygen OS 10) |
 | Storage | 64GB/128GB/256GB (UFS2.1) |
 | SIM | Hybrid Dual SIM (Nano-SIM, dual stand-by) |
@@ -39,4 +40,36 @@ Europe :- AC2003
 | Sensors | Accelerometer, Electronic compass, Gyroscope, Ambient light sensor, Proximity sensor, Sensor Core |
 | Extras | Bluetooth 5.1 (support aptX & aptX HD & LDAC & AAC), NFC enabled |
 
+### To clone this repo
 
+1. Open terminal in the root directory of twrp source.
+
+2. Copy and paste the below command in terminal. (Use Ctrl+C to copy and Shift+Ctrl+V to paste in terminal)
+
+        git clone https://github.com/Sanju0910/twrp_device_oneplus_avicii.git device/oneplus/avicii
+
+### To build
+
+        . /build/envsetup.sh
+        
+        lunch twrp_avicii-eng
+        
+        mka adbd recoveryimage
+        
+### Copyright
+
+#
+# Copyright (C) 2022 The TWRP Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# 
