@@ -1,1 +1,1 @@
-#TWRP Device Tree for OnePlus Nord (avicii)
+# TWRP Device Tree for OnePlus Nord (avicii)
