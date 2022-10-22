@@ -1,5 +1,4 @@
 # TWRP Device Tree for OnePlus Nord (avicii)
-
 <img src="https://github.com/Sanju0910/readme_res/blob/main/images/twrp_logo.png" width=100 height=100 align="left" />  
 
 <p align="center">
