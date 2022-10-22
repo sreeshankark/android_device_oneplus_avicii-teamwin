@@ -8,7 +8,7 @@ OnePlus Nord (codename:- avicii) is the first non-flagship smartphone from OnePl
 
 The phone is avialable in 2 variants:
 
-India  :- AC2001
+India  :-  AC2001
 
 Europe :- AC2003
 
