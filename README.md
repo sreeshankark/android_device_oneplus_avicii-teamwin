@@ -11,8 +11,8 @@ The phone is avialable in 2 variants:
 | ------- | ---------- |
 | India | AC2001 |
 | Europe | AC2003 |
-<img src="https://github.com/Sanju0910/readme_res/blob/main/images/nord_logo.avif" raw="true" />
-<img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_avicii.jpg" width=500 height=500 />
+<img src="https://github.com/Sanju0910/readme_res/blob/main/images/nord_logo.avif" raw="true" width=339.5 height=191 align="right"/>
+<img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_avicii.jpg" width=500 height=500 align="left"/>
 
 | Features   |                                               Specification                                                         |
 | ------------- | ------------- |
