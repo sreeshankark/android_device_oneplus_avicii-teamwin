@@ -44,7 +44,7 @@ The phone is avialable in 2 variants based on region: AC2001 (India) & AC2003 (E
 
 2) Copy and paste the below command in terminal. (Use Ctrl+C to copy and Shift+Ctrl+V to paste in terminal)
 
-        git clone https://github.com/Sanju0910/twrp_device_oneplus_avicii.git device/oneplus/avicii
+        git clone https://github.com/Sanju0910/twrp_device_oneplus_avicii.git -b twrp-12.1 device/oneplus/avicii
 
 ### To build
 
