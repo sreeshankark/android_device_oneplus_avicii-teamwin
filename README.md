@@ -7,9 +7,7 @@
 
 OnePlus Nord (codename:- avicii) is the first non-flagship smartphone from OnePlus Technology Co., Ltd. released in the year 2020.
 
-The phone is avialable in 2 variants based on region.
-
-AC2001 (India) & AC2003 (Europe)
+The phone is avialable in 2 variants based on region: AC2001 (India) & AC2003 (Europe)
 
 <p align="center">
 <img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_avicii.jpg" width=500 height=500 />
