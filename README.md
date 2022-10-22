@@ -1,3 +1,4 @@
+<img src="https://github.com/Sanju0910/readme_res/blob/main/images/twrp_logo.png" width=100 height=100 align="left" />  
 # TWRP Device Tree for OnePlus Nord (avicii)
 
 <p align="center">
@@ -50,7 +51,12 @@ The phone is avialable in 2 variants based on region.
 
 ### To build
 
-        source build/envsetup.sh && lunch twrp_avicii-eng && mka adbd recoveryimage
+        source build/envsetup.sh
+        
+        lunch twrp_avicii-eng
+        
+        mka adbd recoveryimage
+        
         
 ### Copyright
 
