@@ -21,7 +21,7 @@
 | Weight | 184g |
 | Display | 2400x1080, (~408ppi), 20:9, 90Hz, Fluid AMOLED |
 | Camera |
-| ------------------------ | ----------------------------- |
+| ----------------------------------------------------- |
 | Rear (Main) | 48MP(Sony IMX586), 0.8 µm/48M; 1.6 µm (4 in 1)/12M, f/1.75 |
 |             | OIS, EIS, Multi Autofocus (PDAF+CAF) |
 | Rear (Ultra wide angle) | 8MP, f/2.25 |
