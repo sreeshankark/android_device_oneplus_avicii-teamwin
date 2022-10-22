@@ -42,9 +42,9 @@ The phone is avialable in 2 variants based on region.
 
 ### To clone this repo
 
-1. Open terminal in the root directory of twrp source.
+1) Open terminal in the root directory of twrp source.
 
-2. Copy and paste the below command in terminal. (Use Ctrl+C to copy and Shift+Ctrl+V to paste in terminal)
+2) Copy and paste the below command in terminal. (Use Ctrl+C to copy and Shift+Ctrl+V to paste in terminal)
 
         git clone https://github.com/Sanju0910/twrp_device_oneplus_avicii.git device/oneplus/avicii
 
