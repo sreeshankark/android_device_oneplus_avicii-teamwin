@@ -1,14 +1,15 @@
 # TWRP Device Tree for OnePlus Nord (avicii)
 
 
-OnePlus Nord (codename:- avicii) is the first non-flagship smartphone from OnePlus OnePlus Technology Co., Ltd. released in the year 2020
+OnePlus Nord (codename:- avicii) is the first non-flagship smartphone from OnePlus Technology Co., Ltd. released in the year 2020
+
 The phone is avialable in 2 variants:
 | Region | Variant |
 | ------- | ---------- |
 | India | AC2001 |
 | Europe | AC2003 |
+<img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_logo.png" align="centre" />
 <img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_avicii.jpg" width=500 height=500 />
-<img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_logo.png" />
 
 | Features   |                                               Specification                                                         |
 | ------------- | ------------- |
