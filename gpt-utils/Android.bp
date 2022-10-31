@@ -16,24 +16,8 @@
 
 
 cc_library {
-    name: "libgptutils.oneplus_lito",
-    vendor: true,
+    name: "libgptutils",
+    defaults: ["libgptutils_defaults"],
+    vendor_available: true,
     recovery_available: true,
-    shared_libs: [
-        "libcutils",
-        "liblog",
-        "libz",
-    ],
-    cflags: [
-        "-Wall",
-        "-Werror",
-    ],
-    srcs: [
-        "gpt-utils.cpp",
-    ],
-    owner: "qti",
-    header_libs: [
-        "generated_kernel_headers",
-    ],
-    export_include_dirs: ["."],
-}
+    }
