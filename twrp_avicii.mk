@@ -15,7 +15,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/oneplus/avicii/device.mk)
 
 # Inherit some common TWRP stuff.
-$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := avicii
