@@ -22,6 +22,7 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
+
 # Enable CPUSets
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
@@ -78,18 +79,24 @@ TARGET_BOARD_PLATFORM := $(TARGET_BOOTLOADER_BOARD_NAME)
 TARGET_USES_HARDWARE_QCOM_BOOTCTRL := true
 QCOM_BOARD_PLATFORMS += $(TARGET_BOARD_PLATFORM)
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # Partition Info
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_USES_PRODUCTIMAGE := true
-
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 100663296
 BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
 BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := 4096
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+
+# File System Tables for Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/system/etc/recovery.wipe
 
 # Dynamic/Logical Partitions
 BOARD_ONEPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
@@ -117,17 +124,19 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 TARGET_USES_MKE2FS := true
 
 # AVB
+BOARD_AVB_ENABLE := true
 BOARD_AVB_VBMETA_SYSTEM := system system_ext product
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # Encryption
 BOARD_USES_METADATA_PARTITION := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 PLATFORM_SECURITY_PATCH := 2127-12-31
-PLATFORM_VERSION := 16.1.0
+PLATFORM_VERSION := 99.87.36
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
@@ -139,18 +148,19 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TW_THEME := portrait_hdpi
-TW_H_OFFSET := -128
-TW_Y_OFFSET := 128
+TW_H_OFFSET := -103
+TW_Y_OFFSET := 103
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone94/temp"
 TW_EXCLUDE_APEX := true
 TW_DEFAULT_BRIGHTNESS := 200
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXTRA_LANGUAGES := true
+TW_INCLUDE_REPACKTOOLS := true
 TW_HAS_EDL_MODE := true
 TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_RESETPROP := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_NO_CPU_TEMP := true
 TW_OVERRIDE_SYSTEM_PROPS := \
     "ro.build.date.utc;ro.bootimage.build.date.utc=ro.build.date.utc;ro.odm.build.date.utc=ro.build.date.utc;ro.product.build.date.utc=ro.build.date.utc;ro.system.build.date.utc=ro.build.date.utc;ro.system_ext.build.date.utc=ro.build.date.utc;ro.vendor.build.date.utc=ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
 RECOVERY_LIBRARY_SOURCE_FILES += \
@@ -167,25 +177,3 @@ RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/debuggerd
 TARGET_RECOVERY_DEVICE_MODULES += strace
 RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 
-#
-# For local builds only
-#
-# TWRP zip installer
-ifneq ($(wildcard bootable/recovery/installer/.),)
-    USE_RECOVERY_INSTALLER := true
-    RECOVERY_INSTALLER_PATH := bootable/recovery/installer
-endif
-
-# Custom TWRP Versioning
-ifneq ($(wildcard device/common/version-info/.),)
-    CUSTOM_TWRP_VERSION_PREFIX := CPTB
-
-    include device/common/version-info/custom_twrp_version.mk
-
-    ifeq ($(CUSTOM_TWRP_VERSION),)
-        CUSTOM_TWRP_VERSION := $(shell date +%Y%m%d)-01
-    endif
-endif
-#
-# end local build flags
-#
