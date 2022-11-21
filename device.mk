@@ -1,17 +1,17 @@
 #
 # Copyright (C) 2022 The Android Open Source Project
-# Copyright (C) 2022 SebaUbuntu's TWRP device tree generator
+# Copyright (C) 2022 TeamWin Recovery Project 
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 LOCAL_PATH := device/oneplus/avicii
 
-# Enable project quotas and casefolding for emulated storage without sdcardfs
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 # A/B support
 AB_OTA_UPDATER := true
+
+# fscrypt policy
+TW_USE_FSCRYPT_POLICY := 1
 
 # A/B updater updatable partitions list. Keep in sync with the partition list
 # with "_a" and "_b" variants in the device. Note that the vendor can add more
@@ -73,6 +73,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
+    android.hardware.fastboot@1.1-impl-mock.recovery \
     fastbootd
 
 # Soong namespaces
@@ -82,4 +83,33 @@ PRODUCT_SOONG_NAMESPACES += \
 # qcom ncryption
 PRODUCT_PACKAGES += \
     qcom_decrypt \
-    qcom_decrypt_fbe
+    qcom_decrypt_fbe 
+    
+# Recovery Modules
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libion \
+    libxml2 \
+    vendor.display.config@1.0 \
+    vendor.display.config@2.0
+        
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
+    
+    
+ifeq ($(WIN_VARIANT),FBEv2)
+
+# fscrypt policy
+TW_USE_FSCRYPT_POLICY := 2
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.crypto.allow_encrypt_override=true \
+	ro.crypto.dm_default_key.options_format.version=2 \
+	ro.crypto.volume.filenames_mode=aes-256-cts \
+	ro.crypto.volume.metadata.method=dm-default-key \
+	ro.crypto.volume.options=::v2
+ 
+endif

@@ -1,4 +1,4 @@
-# TWRP Device Tree for OnePlus Nord (avicii)
+# OnePlus Nord (avicii) Device Tree for TeamWin Recovery Build
 
 <img src="https://github.com/Sanju0910/readme_res/blob/main/images/twrp_logo.png" width=100 height=100 align="left" />  
 
@@ -7,7 +7,7 @@
 
 OnePlus Nord (codename:- avicii) is the first upper mid-range non-flagship smartphone from OnePlus Technology Co., Ltd. released in the year 2020.
 
-The phone is avialable in 2 variants based on region: AC2001 (India) & AC2003 (Europe)
+The phone is available in 2 variants based on region: AC2001 (India) & AC2003 (Europe)
 
 <p align="center">
 <img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_avicii.jpg" width=500 height=500 />
@@ -38,27 +38,11 @@ The phone is avialable in 2 variants based on region: AC2001 (India) & AC2003 (E
 | Sensors | Accelerometer, Electronic compass, Gyroscope, Ambient light sensor, Proximity sensor, Sensor Core |
 | Extras | Bluetooth 5.1 (support aptX & aptX HD & LDAC & AAC), NFC enabled |
 
-### To clone this repo
-
-1) Open terminal in the root directory of twrp source.
-
-2) Copy and paste the below command in terminal. (Use Ctrl+C to copy and Shift+Ctrl+V to paste in terminal)
-
-        git clone https://github.com/Sanju0910/twrp_device_oneplus_avicii.git -b twrp-12.1 device/oneplus/avicii
-
-### To build
-
-        source build/envsetup.sh
-        
-        lunch twrp_avicii-eng
-        
-        mka adbd recoveryimage
-        
         
 ### Copyright
 
         
-        # Copyright (C) 2022 The TeamWin Recovery Open Source Project
+        # Copyright (C) 2022 The TeamWin Recovery Project
         
         # Licensed under the Apache License, Version 2.0 (the "License");
         # you may not use this file except in compliance with the License.
