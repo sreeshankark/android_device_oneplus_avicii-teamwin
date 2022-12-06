@@ -1,16 +1,16 @@
 # OnePlus Nord (avicii) Device Tree for TeamWin Recovery Build
 
-<img src="https://github.com/Sanju0910/readme_res/blob/main/images/twrp_logo.png" width=100 height=100 align="left" />  
+<img src="https://github.com/Sanju0910/Sanju0910/blob/main/images/twrp_logo.png" width=100 height=100 align="left" />  
 
 
-<img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_logo.png" align="right"/>
+<img src="https://github.com/Sanju0910/Sanju0910/blob/main/images/oneplus_logo.png" align="right"/>
 
 OnePlus Nord (codename:- avicii) is the first upper mid-range non-flagship smartphone from OnePlus Technology Co., Ltd. released in the year 2020.
 
 The phone is available in 2 variants based on region: AC2001 (India) & AC2003 (Europe)
 
 <p align="center">
-<img src="https://github.com/Sanju0910/readme_res/blob/main/images/oneplus_avicii.png" width=500 height=500 />
+<img src="https://github.com/Sanju0910/Sanju0910/blob/main/images/oneplus_avicii.png" width=500 height=500 />
 </p>
 
 | Features | Specification |
